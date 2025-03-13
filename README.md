@@ -1,7 +1,43 @@
 # Product-API
 
 UML:
-![image](https://github.com/user-attachments/assets/92919940-c486-4ca9-bf65-e1c39adc97fe)
+```mermaid
+classDiagram
+    class ProductAPI {
+      +addProduct()
+      +updateProduct()
+      +deleteProduct()
+      +getProduct()
+    }
+    
+    class Product {
+      -id: long
+      -code: string
+      -name: string
+      -description: string
+      -price: double
+      -brand: string
+      -imageUrl: string
+      -createdAt: datetime
+      -updatedAt: datetime
+    }
+    
+    ProductAPI --> Product : manages
+```
 
 ERD
-![image](https://github.com/user-attachments/assets/e4ad07eb-5386-480f-96b9-3c96a3e87975)
+```mermaid
+erDiagram
+    PRODUCTS {
+        long id "PK"
+        string code "unique"
+        string name
+        string description
+        double price
+        string brand
+        string image_url
+        datetime created_at
+        datetime updated_at
+    }
+
+```
