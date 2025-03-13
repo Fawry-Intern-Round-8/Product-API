@@ -16,7 +16,6 @@ classDiagram
       -name: string
       -description: string
       -price: double
-      -brand: string
       -imageUrl: string
       -createdAt: datetime
       -updatedAt: datetime
@@ -34,7 +33,6 @@ erDiagram
         string name
         string description
         double price
-        string brand
         string image_url
         datetime created_at
         datetime updated_at
