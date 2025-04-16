@@ -42,6 +42,12 @@ public class ProductRestController {
         return productService.save(product);
     }
 
+    @PutMapping("/{productId}")
+    public Product updateProductById(@PathVariable int productId, @RequestBody Product product) {
+        product.setId(productId);
+        return productService.save(product);
+    }
+
     @DeleteMapping("/{productId}")
     public String deleteProduct(@PathVariable int productId) {
         Product product = productService.findById(productId);
