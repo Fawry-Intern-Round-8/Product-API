@@ -1,7 +1,7 @@
-package com.fawry.Product_API.service;
+package com.fawry.product.service;
 
-import com.fawry.Product_API.dao.ProductDAO;
-import com.fawry.Product_API.entity.Product;
+import com.fawry.product.dao.ProductDAO;
+import com.fawry.product.entity.Product;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

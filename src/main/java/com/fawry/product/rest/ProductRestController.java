@@ -1,7 +1,7 @@
-package com.fawry.Product_API.rest;
+package com.fawry.product.rest;
 
-import com.fawry.Product_API.entity.Product;
-import com.fawry.Product_API.service.ProductService;
+import com.fawry.product.entity.Product;
+import com.fawry.product.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 

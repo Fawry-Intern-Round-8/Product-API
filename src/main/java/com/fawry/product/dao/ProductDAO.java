@@ -1,10 +1,10 @@
-package com.fawry.Product_API.service;
+package com.fawry.product.dao;
 
-import com.fawry.Product_API.entity.Product;
+import com.fawry.product.entity.Product;
 
 import java.util.List;
 
-public interface ProductService {
+public interface ProductDAO {
     Product save(Product product);
 
     void deleteById(int id);
@@ -12,4 +12,5 @@ public interface ProductService {
     Product findById(int id);
 
     List<Product> findAll();
+
 }

@@ -1,6 +1,6 @@
-package com.fawry.Product_API.dao;
+package com.fawry.product.dao;
 
-import com.fawry.Product_API.entity.Product;
+import com.fawry.product.entity.Product;
 import jakarta.persistence.EntityManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
