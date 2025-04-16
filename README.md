@@ -1,30 +1,32 @@
 # Product-API
 
 UML:
+
 ```mermaid
 classDiagram
     class ProductAPI {
-      +addProduct()
-      +updateProduct()
-      +deleteProduct()
-      +getProduct()
+        +addProduct()
+        +updateProduct()
+        +deleteProduct()
+        +getProduct()
     }
-    
+
     class Product {
-      -id: long
-      -code: string
-      -name: string
-      -description: string
-      -price: double
-      -imageUrl: string
-      -createdAt: datetime
-      -updatedAt: datetime
+        -id: long
+        -code: string
+        -name: string
+        -description: string
+        -price: double
+        -imageUrl: string
+        -createdAt: datetime
+        -updatedAt: datetime
     }
-    
-    ProductAPI --> Product : manages
+
+    ProductAPI --> Product: manages
 ```
 
 ERD
+
 ```mermaid
 erDiagram
     PRODUCTS {
