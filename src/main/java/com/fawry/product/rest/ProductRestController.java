@@ -8,21 +8,21 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/v1/products")
 public class ProductRestController {
-    private ProductService productService;
+    private final ProductService productService;
 
     @Autowired
     public ProductRestController(ProductService productService) {
         this.productService = productService;
     }
 
-    @GetMapping("/products")
+    @GetMapping
     public List<Product> findAll() {
         return productService.findAll();
     }
 
-    @GetMapping("/products/{productId}")
+    @GetMapping("/{productId}")
     public Product getProduct(@PathVariable int productId) {
         Product product = productService.findById(productId);
         if (product == null) {
@@ -31,18 +31,18 @@ public class ProductRestController {
         return product;
     }
 
-    @PostMapping("/products")
+    @PostMapping
     public Product addProduct(@RequestBody Product product) {
         product.setId(0);
         return productService.save(product);
     }
 
-    @PutMapping("/products")
+    @PutMapping()
     public Product updateProduct(@RequestBody Product product) {
         return productService.save(product);
     }
 
-    @DeleteMapping("/products/{productId}")
+    @DeleteMapping("/{productId}")
     public String deleteProduct(@PathVariable int productId) {
         Product product = productService.findById(productId);
         if (product == null) {
